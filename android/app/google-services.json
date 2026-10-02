@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1080145154018",
+    "firebase_url": "https://loginpageweb-6ae95-default-rtdb.firebaseio.com",
+    "project_id": "loginpageweb-6ae95",
+    "storage_bucket": "loginpageweb-6ae95.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080145154018:android:1c5289cf9442761dc273bb",
+        "android_client_info": {
+          "package_name": "com.flutterflow.firebaseproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC48VnOaWFWhd_2dE0bcJ1jONyQc29MCw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

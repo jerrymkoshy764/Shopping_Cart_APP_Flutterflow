@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /Product/{document} {
+      allow create: if false;
+      allow read: if request.auth != null;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /User/{document} {
+      allow create: if request.auth.uid == document;
+      allow read: if request.auth.uid == document;
+      allow write: if request.auth.uid == resource.data.email;
+      allow delete: if false;
+    }
+
+    match /User/{parent}/Carts/{document} {
+      allow create: if request.auth.uid == parent;
+      allow read: if request.auth.uid == parent;
+      allow write: if request.auth.uid == get(/databases/$(database)/documents/User/$(parent)).data.email;
+      allow delete: if request.auth.uid == get(/databases/$(database)/documents/User/$(parent)).data.email;
+    }
+  }
+}
